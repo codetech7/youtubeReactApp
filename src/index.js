@@ -7,7 +7,7 @@ import Searchbar from './components/'
 const API_PRIVATE_KEY = 'AIzaSyCIiKrXKCgURNlqTQGtnvUZRcLuIVnVrLE';
 
 const App = () => {
-  return <div>Hi there</div>;
+  return <div> <Searchbar /> </div>;
 }
 
 
