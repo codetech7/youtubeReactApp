@@ -1,7 +1,13 @@
-const React = require('react');
+// const React = require('react');
+// const ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+
 
 const App = () => {
   return <div>Hi there</div>;
 }
-const app = new App();
-ReactDOM.render(app);
+
+
+ReactDOM.render(<App />, document.querySelector("container"));
