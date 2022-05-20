@@ -12,7 +12,7 @@ class Searchbar extends Component {
         super(props);
 
         this.state = {
-            inputContent: '',
+            inputContent: this.props.search,
             inputClicks: 0,
             buttonClicks: 0,
              inputCount : 0
@@ -20,7 +20,10 @@ class Searchbar extends Component {
             //     return inputContent.length;
 
             // }
+
         }
+
+        
 
         //the idea of states is that instead of creating several attribute variables, we can just create an object
         //or mapping to store all the attributes and call that the state.
