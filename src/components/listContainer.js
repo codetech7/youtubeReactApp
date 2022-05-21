@@ -1,26 +1,43 @@
 import React, {Component} from  'react';
+import ListItem from "./listItems"
 
-class Listcontainer extends Component{
+// class Listcontainer extends Component{
 
-    constructor(props){
-        super(props);
+    // constructor(props){
+    //     super(props);
 
-        setTimeout(() => {
-            console.log(this.props.videos);
+    //     this.state = {array : []};
 
-        }, 6000 );
+    //     this.state.array = props.videos.map(video=>{
+    //       return  (<ListItem videoz = {video} />);
+    //     });
+
+
+    //     // setTimeout(() => {
+    //     //     console.log(this.props.videos);
+
+    //     // }, 6000 );
 
         
-    }
+    // }
 
-    render(){
+
+
+   const Listcontainer = (props) =>{
+
+   const ListItems = props.videos.map(video=>{
+         return  (<ListItem videoz = {video} key = {video.etag} />);
+     });
+
+     const arr = [1,2,3]
        
+      //  console.log(this.props.videos); //ine was written to test console logging happening same time as rendering on screen
        return ( 
        <ul className="col-md-4  list-group">
-           {this.props.videos[1].kind}
+           {ListItems}
         </ul>
         );
     }
-}
+// }
 
 export default Listcontainer;

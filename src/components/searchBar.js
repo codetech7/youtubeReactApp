@@ -12,10 +12,10 @@ class Searchbar extends Component {
         super(props);
 
         this.state = {
-            inputContent: this.props.search,
-            inputClicks: 0,
-            buttonClicks: 0,
-             inputCount : 0
+            inputContent: this.props.search,  //state to store search input
+            inputClicks: 0, //state to store number of entries into search bar
+            buttonClicks: 0, //state to store number of times button has been clicked
+             inputCount : 0  //state to store number of entries into search bar
             //  ()=>{
             //     return inputContent.length;
 
@@ -29,7 +29,7 @@ class Searchbar extends Component {
         //or mapping to store all the attributes and call that the state.
     }
     
-    render() {
+    render() {  //render runs when the state is reset, causing children to also rerender
         return (
         <div>
             <input value={this.state.inputContent}

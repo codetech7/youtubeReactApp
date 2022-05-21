@@ -14,24 +14,19 @@ class App extends Component {
   constructor(props){
     super(props);
 
-    (() => {
-        
-        setTimeout(() => {
+    this.state = {
+      videos : [], 
+      searchterm: ''
+     };
+  
           
            youtubeQuery({key: API_PRIVATE_KEY, term: 'chess'}, (youtubeVideos) => {
             this.setState({videos:youtubeVideos});
           });
   
-        }, 3000);
-      
-    }
-    )();
+        
 
-    this.state = {
-      videos: [], 
-      searchterm: 'teju'
-     };
-  }
+    }
 
   render(){
   return (
@@ -42,7 +37,7 @@ class App extends Component {
   );
 
   }
-}
 
+}
 
 ReactDOM.render(<App />, document.querySelector(".container"));
