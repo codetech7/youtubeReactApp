@@ -12,7 +12,27 @@ super(props);
 render(){
 
     return(
-    <li>Video</li>
+    <li className = "list-group-item">
+
+    <div className = "media-list">
+        
+        <div className = "media-left">
+            
+            <img className = "media-object" src = {this.props.videoz.snippet.thumbnails.default.url}/>
+
+        </div>
+
+        <div className = "media-body">
+            
+            <div className = "media-heading">{this.props.videoz.snippet.title}</div>
+
+        </div>
+
+
+    </div>
+
+
+    </li>
     );
 }
 }

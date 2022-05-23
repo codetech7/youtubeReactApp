@@ -12,7 +12,7 @@ class Searchbar extends Component {
         super(props);
 
         this.state = {
-            inputContent: this.props.search,  //state to store search input
+            inputContent: '',  //state to store search input
             inputClicks: 0, //state to store number of entries into search bar
             buttonClicks: 0, //state to store number of times button has been clicked
              inputCount : 0  //state to store number of entries into search bar
@@ -29,6 +29,11 @@ class Searchbar extends Component {
         //or mapping to store all the attributes and call that the state.
     }
     
+    itemEntered(itemEntered){
+        this.props.searchFunction(itemEntered);
+        this.setState({inputContent: itemEntered});
+
+    }
     render() {  //render runs when the state is reset, causing children to also rerender
         return (
         <div>
@@ -36,25 +41,28 @@ class Searchbar extends Component {
                 onChange={
                     (event) => { //used to note when an input comes into the text field
                         // console.log(event.target.value);
-                        this.setState({ inputContent: event.target.value });
-                        this.setState({ inputCount: event.target.value.length });
+                        //this.setState({ inputContent: event.target.value });
+                       // this.setState({ inputCount: event.target.value.length });
+                        
+                       this.itemEntered(event.target.value);
+                    
                     }
                 }
-                onClick={
-                    function (event) {
-                        console.log(event.type);
-                    }
-                }
+                // onClick={
+                //     function (event) {
+                //         console.log(event.type);
+                //     }
+                // }
             />
 
-            <button onClick={
+            {/* <button onClick={
                     function (event) {
                         console.log(event);
                     }
                 }
-            />
+            /> */}
 
-            <div > this input contains {this.state.inputCount} characters </div> 
+            {/* <div > this input contains {this.state.inputCount} characters </div>  */}
         </div>
         )
     }

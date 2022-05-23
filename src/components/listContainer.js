@@ -26,6 +26,8 @@ import ListItem from "./listItems"
    const Listcontainer = (props) =>{
 
    const ListItems = props.videos.map(video=>{
+
+        // console.log(video);
          return  (<ListItem videoz = {video} key = {video.etag} />);
      });
 
@@ -33,7 +35,9 @@ import ListItem from "./listItems"
        
       //  console.log(this.props.videos); //ine was written to test console logging happening same time as rendering on screen
        return ( 
-       <ul className="col-md-4  list-group">
+           
+
+       <ul className="col-md-3  list-group">
            {ListItems}
         </ul>
         );
