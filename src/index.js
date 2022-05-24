@@ -8,7 +8,7 @@ import Listcontainer from './components/listContainer';
 import regeneratorRuntime from "regenerator-runtime";
 import VideoPanel from './components/videoPanel';
 
-const API_PRIVATE_KEY = 'AIzaSyCIiKrXKCgURNlqTQGtnvUZRcLuIVnVrLE';
+const API_PRIVATE_KEY = 'AIzaSyCqRxEgSFoY_iSa33dvPk_AMdiU0uhKFs4';
 
 class App extends Component {
 
@@ -17,7 +17,7 @@ class App extends Component {
 
     this.state = {
       videos : [], 
-      selectedVideo: [],
+      selectedVideo: null,
       searchterm: 'juju'
      };
   

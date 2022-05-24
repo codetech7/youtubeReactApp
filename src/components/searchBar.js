@@ -37,7 +37,7 @@ class Searchbar extends Component {
     render() {  //render runs when the state is reset, causing children to also rerender
         return (
         <div>
-            <input value={this.state.inputContent}
+            <input 
                 onChange={
                     (event) => { //used to note when an input comes into the text field
                         // console.log(event.target.value);

@@ -28,10 +28,10 @@ import ListItem from "./listItems"
    const ListItems = props.videos.map(video=>{
 
         // console.log(video);
-         return  (<ListItem videoz = {video} key = {video.etag} />);
+         return  (<ListItem videoz = {video} key = {video.etag} setVideo = {props.setVideo}/>);
      });
 
-     const arr = [1,2,3]
+     //const arr = [1,2,3]
        
       //  console.log(this.props.videos); //ine was written to test console logging happening same time as rendering on screen
        return ( 
